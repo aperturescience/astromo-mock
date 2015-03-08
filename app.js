@@ -15,7 +15,7 @@ app.use(bodyParser.urlencoded({
     extended: false
 }));
 
-var cerberus = require('cerberus-middleware')({ _debug: true });
+var cerberus = require('cerberus-middleware')({ debug: true });
 
 app.use(cerberus.Analytics);
 
