@@ -20,7 +20,7 @@ var cerberus = require('cerberus-middleware')({
   debug: true
 });
 
-app.use(cerberus.Analytics);
+app.use(cerberus.Metrics);
 
 app.use('/', routes);
 app.use('/users', users);
