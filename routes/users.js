@@ -1,3 +1,5 @@
+'use strict';
+
 var faker   = require('faker');
 
 var express = require('express');
@@ -5,7 +7,7 @@ var router  = express.Router();
 
 router.get('/', function(req, res, next) {
 
-  var timeout = getRandomInt(1000, 2000);
+  var timeout = getRandomInt(5, 20);
 
   setTimeout(function() {
     res.send({
