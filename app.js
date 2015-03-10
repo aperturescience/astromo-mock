@@ -4,7 +4,7 @@ var express    = require('express');
 
 var logger     = require('morgan');
 var bodyParser = require('body-parser');
-var cerberus   = require('cerberus-middleware');
+var astromo    = require('astromo-middleware');
 
 var routes     = require('./routes/index');
 var users      = require('./routes/users');
@@ -17,7 +17,7 @@ app.use(bodyParser.urlencoded({
   extended: false
 }));
 
-app.use(cerberus.Metrics({ debug: true }));
+app.use(astromo.Metrics({ debug: true }));
 
 app.use('/', routes);
 app.use('/users', users);
