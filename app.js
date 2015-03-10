@@ -1,14 +1,15 @@
 'use strict';
 
-var express = require('express');
+var express    = require('express');
 
-var logger = require('morgan');
+var logger     = require('morgan');
 var bodyParser = require('body-parser');
+var cerberus   = require('cerberus-middleware');
 
-var routes = require('./routes/index');
-var users = require('./routes/users');
+var routes     = require('./routes/index');
+var users      = require('./routes/users');
 
-var app = express();
+var app        = express();
 
 app.use(logger('dev'));
 app.use(bodyParser.json());
@@ -16,11 +17,7 @@ app.use(bodyParser.urlencoded({
   extended: false
 }));
 
-var cerberus = require('cerberus-middleware')({
-  debug: true
-});
-
-app.use(cerberus.Metrics);
+app.use(cerberus.Metrics({ debug: true }));
 
 app.use('/', routes);
 app.use('/users', users);

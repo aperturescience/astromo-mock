@@ -5,7 +5,7 @@ var router  = express.Router();
 
 router.get('/', function(req, res, next) {
 
-  var timeout = getRandomInt(3, 20);
+  var timeout = getRandomInt(1000, 2000);
 
   setTimeout(function() {
     res.send({
