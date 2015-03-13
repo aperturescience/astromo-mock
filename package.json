@@ -12,6 +12,6 @@
     "faker": "^2.1.2",
     "morgan": "~1.5.1",
     "request": "^2.53.0",
-    "cerberus-middleware": "aperturescience/cerberus-middleware.git"
+    "astromo-middleware": "aperturescience/astromo-middleware.git"
   }
 }
